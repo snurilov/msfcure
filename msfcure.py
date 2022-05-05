@@ -31,13 +31,13 @@ def decode_alpha2(b,prefix,op):
     lp=len(prefix)
     index = b.find(prefix)+lp
     theend = b.find(b'AA',index+1)
-    print(index,lp,theend)
+    #print(index,lp,theend)
     if(len(b)<(lp+2)): raise Exception("ERROR: input shellcode is too small")
     if(index<(lp-1)): raise Exception("ERROR: prefix not found in shellcode at expected location")
     if(theend<index):raise Exception("ERROR: shellcode doesn't end with expected TRAILER")
     encoded_part=b[index:theend]
     lep = len(encoded_part)
-    if(lep%2!=0):raise Exception("ERROR: encoded shellcode length is not multipel of 2")
+    if(lep%2!=0):raise Exception("ERROR: encoded shellcode length is not multiple of 2")
     ret = []
     #hexdump.hexdump(encoded_part)
     for i in range(0,lep,2):
