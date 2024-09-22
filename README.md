@@ -2,7 +2,7 @@
 Script for extracting MSFVenom alpha encoded shellcode
 
 
-In the 2020 Flare-On challenge 7, there was a particularly interesting PCAP challenge that had alpha encoded shellcode needing reverse engineering.
+In the 2020 Flare-On challenge 7, there was a particularly interesting PCAP challenge that had alpha encoded shellcode that I needed to reverse engineer. As a result, I creatd this msfcure script to help me unpack the shellcode to understand it better.
 
 The following reference https://www.offensive-security.com/metasploit-unleashed/alphanumeric-shellcode/ explains how shellcode can be encoded using the following sample commands:
 ```
